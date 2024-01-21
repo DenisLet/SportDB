@@ -1,0 +1,536 @@
+{
+    "Albania": {
+        "Men": {
+            "SUPERLIGA": "https://www.basketball24.com/albania/superliga"
+        },
+        "Women": {}
+    },
+    "Argentina": {
+        "Men": {
+            "LIGA A": "https://www.basketball24.com/argentina/liga-a"
+        },
+        "Women": {
+            "LIGA FEMENINA WOMEN": "https://www.basketball24.com/argentina/liga-femenina-women"
+        }
+    },
+    "Australia": {
+        "Men": {
+            "NBL": "https://www.basketball24.com/australia/nbl"
+        },
+        "Women": {
+            "WNBL WOMEN": "https://www.basketball24.com/australia/wnbl-women"
+        }
+    },
+    "Austria": {
+        "Men": {
+            "SUPERLIGA": "https://www.basketball24.com/austria/superliga",
+            "ZWEITE LIGA": "https://www.basketball24.com/austria/zweite-liga"
+        },
+        "Women": {
+            "SUPERLIGA WOMEN": "https://www.basketball24.com/austria/superliga-women"
+        }
+    },
+    "Belarus": {
+        "Men": {
+            "PREMIER LEAGUE": "https://www.basketball24.com/belarus/premier-league"
+        },
+        "Women": {
+            "PREMIER LEAGUE WOMEN": "https://www.basketball24.com/belarus/premier-league-women"
+        }
+    },
+    "Belgium": {
+        "Men": {
+            "PRO BASKETBALL LEAGUE": "https://www.basketball24.com/belgium/pro-basketball-league"
+        },
+        "Women": {
+            "TOP DIVISION WOMEN": "https://www.basketball24.com/belgium/top-division-women"
+        }
+    },
+    "Bolivia": {
+        "Men": {
+            "LIBOBASQUET": "https://www.basketball24.com/bolivia/libobasquet"
+        },
+        "Women": {}
+    },
+    "Bosnia And Herzegovina": {
+        "Men": {
+            "PRVENSTVO BIH": "https://www.basketball24.com/bosnia-and-herzegovina/prvenstvo-bih"
+        },
+        "Women": {
+            "PRVENSTVO BIH WOMEN": "https://www.basketball24.com/bosnia-and-herzegovina/prvenstvo-bih-women"
+        }
+    },
+    "Brazil": {
+        "Men": {
+            "NBB": "https://www.basketball24.com/brazil/nbb"
+        },
+        "Women": {
+            "LBF WOMEN": "https://www.basketball24.com/brazil/lbf-women"
+        }
+    },
+    "Bulgaria": {
+        "Men": {
+            "NBL": "https://www.basketball24.com/bulgaria/nbl"
+        },
+        "Women": {}
+    },
+    "Chile": {
+        "Men": {
+            "LNB": "https://www.basketball24.com/chile/lnb",
+            "LNB 2": "https://www.basketball24.com/chile/lnb-2"
+        },
+        "Women": {}
+    },
+    "China": {
+        "Men": {
+            "CBA": "https://www.basketball24.com/china/cba"
+        },
+        "Women": {
+            "WCBA WOMEN": "https://www.basketball24.com/china/wcba-women"
+        }
+    },
+    "Colombia": {
+        "Men": {
+            "LBP": "https://www.basketball24.com/colombia/lbp"
+        },
+        "Women": {}
+    },
+    "Croatia": {
+        "Men": {
+            "PREMIJER LIGA": "https://www.basketball24.com/croatia/premijer-liga",
+            "PRVA LIGA": "https://www.basketball24.com/croatia/prva-liga"
+        },
+        "Women": {
+            "PREMIJER LIGA WOMEN": "https://www.basketball24.com/croatia/premijer-liga-women"
+        }
+    },
+    "Cyprus": {
+        "Men": {
+            "DIVISION A": "https://www.basketball24.com/cyprus/division-a"
+        },
+        "Women": {}
+    },
+    "Czech Republic": {
+        "Men": {
+            "NBL": "https://www.basketball24.com/czech-republic/nbl",
+            "1 LIGA": "https://www.basketball24.com/czech-republic/1-liga"
+        },
+        "Women": {}
+    },
+    "Denmark": {
+        "Men": {
+            "BASKETLIGAEN": "https://www.basketball24.com/denmark/basketligaen"
+        },
+        "Women": {
+            "KVINDEBASKETLIGAEN WOMEN": "https://www.basketball24.com/denmark/kvindebasketligaen-women"
+        }
+    },
+    "Dominican Republic": {
+        "Men": {
+            "LNB": "https://www.basketball24.com/dominican-republic/lnb"
+        },
+        "Women": {}
+    },
+    "Estonia": {
+        "Men": {
+            "KORVPALLI MEISTRILIIGA": "https://www.basketball24.com/estonia/korvpalli-meistriliiga"
+        },
+        "Women": {}
+    },
+    "Finland": {
+        "Men": {
+            "KORISLIIGA": "https://www.basketball24.com/finland/korisliiga",
+            "I DIVISIOONA A": "https://www.basketball24.com/finland/i-divisioona-a"
+        },
+        "Women": {
+            "KORISLIIGA WOMEN": "https://www.basketball24.com/finland/korisliiga-women",
+            "I DIVISIOONA WOMEN": "https://www.basketball24.com/finland/i-divisioona-women"
+        }
+    },
+    "France": {
+        "Men": {
+            "LNB": "https://www.basketball24.com/france/lnb",
+            "PRO B": "https://www.basketball24.com/france/pro-b"
+        },
+        "Women": {
+            "LFB WOMEN": "https://www.basketball24.com/france/lfb-women",
+            "LIGUE 2 WOMEN": "https://www.basketball24.com/france/ligue-2-women"
+        }
+    },
+    "Georgia": {
+        "Men": {
+            "SUPERLEAGUE": "https://www.basketball24.com/georgia/superleague"
+        },
+        "Women": {}
+    },
+    "Germany": {
+        "Men": {
+            "BBL": "https://www.basketball24.com/germany/bbl",
+            "PRO A": "https://www.basketball24.com/germany/pro-a"
+        },
+        "Women": {
+            "DBBL WOMEN": "https://www.basketball24.com/germany/dbbl-women"
+        }
+    },
+    "Greece": {
+        "Men": {
+            "BASKET LEAGUE": "https://www.basketball24.com/greece/basket-league",
+            "ELITE LEAGUE": "https://www.basketball24.com/greece/elite-league"
+        },
+        "Women": {
+            "A1 WOMEN": "https://www.basketball24.com/greece/a1-women"
+        }
+    },
+    "Hungary": {
+        "Men": {
+            "NB I A": "https://www.basketball24.com/hungary/nb-i-a"
+        },
+        "Women": {
+            "NB I A WOMEN": "https://www.basketball24.com/hungary/nb-i-a-women"
+        }
+    },
+    "Iceland": {
+        "Men": {
+            "PREMIER LEAGUE": "https://www.basketball24.com/iceland/premier-league"
+        },
+        "Women": {
+            "PREMIER LEAGUE WOMEN": "https://www.basketball24.com/iceland/premier-league-women"
+        }
+    },
+    "Indonesia": {
+        "Men": {
+            "IBL": "https://www.basketball24.com/indonesia/ibl"
+        },
+        "Women": {}
+    },
+    "Iran": {
+        "Men": {
+            "SUPER LEAGUE": "https://www.basketball24.com/iran/super-league"
+        },
+        "Women": {}
+    },
+    "Ireland": {
+        "Men": {
+            "SUPERLEAGUE": "https://www.basketball24.com/ireland/superleague"
+        },
+        "Women": {}
+    },
+    "Israel": {
+        "Men": {
+            "SUPER LEAGUE": "https://www.basketball24.com/israel/super-league",
+            "LIGA LEUMIT": "https://www.basketball24.com/israel/liga-leumit"
+        },
+        "Women": {
+            "WBL WOMEN": "https://www.basketball24.com/israel/wbl-women"
+        }
+    },
+    "Italy": {
+        "Men": {
+            "LEGA A": "https://www.basketball24.com/italy/lega-a",
+            "SERIE A2": "https://www.basketball24.com/italy/serie-a2"
+        },
+        "Women": {
+            "SERIE A1 WOMEN": "https://www.basketball24.com/italy/serie-a1-women",
+            "SERIE A2 WOMEN GR A": "https://www.basketball24.com/italy/serie-a2-women-gr-a",
+            "SERIE A2 WOMEN GR B": "https://www.basketball24.com/italy/serie-a2-women-gr-b"
+        }
+    },
+    "Japan": {
+        "Men": {
+            "B LEAGUE": "https://www.basketball24.com/japan/b-league",
+            "B2 LEAGUE": "https://www.basketball24.com/japan/b2-league"
+        },
+        "Women": {
+            "W LEAGUE WOMEN": "https://www.basketball24.com/japan/w-league-women"
+        }
+    },
+    "Kazakhstan": {
+        "Men": {
+            "NATIONAL LEAGUE": "https://www.basketball24.com/kazakhstan/national-league"
+        },
+        "Women": {
+            "NATIONAL LEAGUE WOMEN": "https://www.basketball24.com/kazakhstan/national-league-women"
+        }
+    },
+    "Latvia": {
+        "Men": {
+            "LBL": "https://www.basketball24.com/latvia/lbl"
+        },
+        "Women": {}
+    },
+    "Lebanon": {
+        "Men": {
+            "DIVISION 1": "https://www.basketball24.com/lebanon/division-1"
+        },
+        "Women": {}
+    },
+    "Lithuania": {
+        "Men": {
+            "LKL": "https://www.basketball24.com/lithuania/lkl",
+            "NKL": "https://www.basketball24.com/lithuania/nkl"
+        },
+        "Women": {
+            "MOTERU LYGA WOMEN": "https://www.basketball24.com/lithuania/moteru-lyga-women"
+        }
+    },
+    "Mexico": {
+        "Men": {
+            "LNBP": "https://www.basketball24.com/mexico/lnbp"
+        },
+        "Women": {
+            "LMBPF WOMEN": "https://www.basketball24.com/mexico/lmbpf-women"
+        }
+    },
+    "Montenegro": {
+        "Men": {
+            "PRVA A LIGA": "https://www.basketball24.com/montenegro/prva-a-liga"
+        },
+        "Women": {}
+    },
+    "Netherlands": {
+        "Men": {
+            "DBL": "https://www.basketball24.com/netherlands/dbl"
+        },
+        "Women": {
+            "WBL WOMEN": "https://www.basketball24.com/netherlands/wbl-women"
+        }
+    },
+    "New Zealand": {
+        "Men": {
+            "NBL": "https://www.basketball24.com/new-zealand/nbl"
+        },
+        "Women": {
+            "TAUIHI WOMEN": "https://www.basketball24.com/new-zealand/tauihi-women"
+        }
+    },
+    "North Macedonia": {
+        "Men": {
+            "PRVA LIGA": "https://www.basketball24.com/north-macedonia/prva-liga"
+        },
+        "Women": {}
+    },
+    "Norway": {
+        "Men": {
+            "BLNO": "https://www.basketball24.com/norway/blno"
+        },
+        "Women": {
+            "KVINNELIGAEN WOMEN": "https://www.basketball24.com/norway/kvinneligaen-women"
+        }
+    },
+    "Paraguay": {
+        "Men": {
+            "LNB": "https://www.basketball24.com/paraguay/lnb"
+        },
+        "Women": {}
+    },
+    "Philippines": {
+        "Men": {
+            "COMMISSIONERS CUP": "https://www.basketball24.com/philippines/commissioners-cup"
+        },
+        "Women": {}
+    },
+    "Poland": {
+        "Men": {
+            "BASKET LIGA": "https://www.basketball24.com/poland/basket-liga",
+            "1 LIGA": "https://www.basketball24.com/poland/1-liga"
+        },
+        "Women": {
+            "BASKET LIGA WOMEN": "https://www.basketball24.com/poland/basket-liga-women"
+        }
+    },
+    "Portugal": {
+        "Men": {
+            "LPB": "https://www.basketball24.com/portugal/lpb",
+            "PROLIGA": "https://www.basketball24.com/portugal/proliga"
+        },
+        "Women": {
+            "LFB WOMEN": "https://www.basketball24.com/portugal/lfb-women"
+        }
+    },
+    "Puerto Rico": {
+        "Men": {
+            "BSN": "https://www.basketball24.com/puerto-rico/bsn"
+        },
+        "Women": {}
+    },
+    "Qatar": {
+        "Men": {
+            "QBL": "https://www.basketball24.com/qatar/qbl"
+        },
+        "Women": {}
+    },
+    "Romania": {
+        "Men": {
+            "DIVIZIA A": "https://www.basketball24.com/romania/divizia-a"
+        },
+        "Women": {
+            "LIGA NATIONAL WOMEN": "https://www.basketball24.com/romania/liga-national-women"
+        }
+    },
+    "Russia": {
+        "Men": {
+            "VTB UNITED LEAGUE": "https://www.basketball24.com/russia/vtb-united-league",
+            "SUPER LEAGUE": "https://www.basketball24.com/russia/super-league"
+        },
+        "Women": {
+            "PREMIER LEAGUE WOMEN": "https://www.basketball24.com/russia/premier-league-women"
+        }
+    },
+    "Saudi Arabia": {
+        "Men": {
+            "PREMIER LEAGUE": "https://www.basketball24.com/saudi-arabia/premier-league"
+        },
+        "Women": {}
+    },
+    "Serbia": {
+        "Men": {
+            "SUPERLEAGUE": "https://www.basketball24.com/serbia/superleague"
+        },
+        "Women": {
+            "1 ZLS WOMEN": "https://www.basketball24.com/serbia/1-zls-women"
+        }
+    },
+    "Singapore": {
+        "Men": {
+            "NBL": "https://www.basketball24.com/singapore/nbl"
+        },
+        "Women": {}
+    },
+    "Slovakia": {
+        "Men": {
+            "EXTRALIGA": "https://www.basketball24.com/slovakia/extraliga"
+        },
+        "Women": {
+            "EXTRALIGA WOMEN": "https://www.basketball24.com/slovakia/extraliga-women"
+        }
+    },
+    "Slovenia": {
+        "Men": {
+            "LIGA NOVA KBM": "https://www.basketball24.com/slovenia/liga-nova-kbm"
+        },
+        "Women": {
+            "1 SKL WOMEN": "https://www.basketball24.com/slovenia/1-skl-women"
+        }
+    },
+    "South Korea": {
+        "Men": {
+            "KBL": "https://www.basketball24.com/south-korea/kbl"
+        },
+        "Women": {
+            "WKBL WOMEN": "https://www.basketball24.com/south-korea/wkbl-women"
+        }
+    },
+    "Spain": {
+        "Men": {
+            "ACB": "https://www.basketball24.com/spain/acb",
+            "LEB ORO": "https://www.basketball24.com/spain/leb-oro"
+        },
+        "Women": {
+            "LIGA FEMENINA WOMEN": "https://www.basketball24.com/spain/liga-femenina-women"
+        }
+    },
+    "Sweden": {
+        "Men": {
+            "BASKETLIGAN": "https://www.basketball24.com/sweden/basketligan",
+            "SUPERETTAN": "https://www.basketball24.com/sweden/superettan"
+        },
+        "Women": {
+            "BASKETLIGAN WOMEN": "https://www.basketball24.com/sweden/basketligan-women",
+            "BASKETETTAN WOMEN": "https://www.basketball24.com/sweden/basketettan-women"
+        }
+    },
+    "Switzerland": {
+        "Men": {
+            "SB LEAGUE": "https://www.basketball24.com/switzerland/sb-league"
+        },
+        "Women": {
+            "SB LEAGUE WOMEN": "https://www.basketball24.com/switzerland/sb-league-women"
+        }
+    },
+    "Taiwan": {
+        "Men": {
+            "SBL": "https://www.basketball24.com/taiwan/sbl",
+            "P LEAGUE": "https://www.basketball24.com/taiwan/p-league",
+            "T1 LEAGUE": "https://www.basketball24.com/taiwan/t1-league"
+        },
+        "Women": {
+            "WSBL WOMEN": "https://www.basketball24.com/taiwan/wsbl-women"
+        }
+    },
+    "Thailand": {
+        "Men": {
+            "TBL": "https://www.basketball24.com/thailand/tbl"
+        },
+        "Women": {}
+    },
+    "Turkey": {
+        "Men": {
+            "SUPER LIG": "https://www.basketball24.com/turkey/super-lig",
+            "TBL": "https://www.basketball24.com/turkey/tbl",
+            "TB2L": "https://www.basketball24.com/turkey/tb2l"
+        },
+        "Women": {
+            "KBSL WOMEN": "https://www.basketball24.com/turkey/kbsl-women",
+            "TKBL WOMEN": "https://www.basketball24.com/turkey/tkbl-women"
+        }
+    },
+    "United Kingdom": {
+        "Men": {
+            "BBL": "https://www.basketball24.com/united-kingdom/bbl"
+        },
+        "Women": {
+            "WBBL WOMEN": "https://www.basketball24.com/united-kingdom/wbbl-women"
+        }
+    },
+    "Uruguay": {
+        "Men": {
+            "LIGA URUGUAYA": "https://www.basketball24.com/uruguay/liga-uruguaya"
+        },
+        "Women": {}
+    },
+    "Usa": {
+        "Men": {
+            "NBA": "https://www.basketball24.com/usa/nba"
+        },
+        "Women": {
+            "WNBA": "https://www.basketball24.com/usa/wnba"
+        }
+    },
+    "Venezuela": {
+        "Men": {
+            "SUPERLIGA": "https://www.basketball24.com/venezuela/superliga"
+        },
+        "Women": {}
+    },
+    "Vietnam": {
+        "Men": {
+            "VBA": "https://www.basketball24.com/vietnam/vba"
+        },
+        "Women": {}
+    },
+    "Europe": {
+        "Men": {
+            "EUROLEAGUE": "https://www.basketball24.com/europe/euroleague",
+            "EUROCUP": "https://www.basketball24.com/europe/eurocup",
+            "CHAMPIONS LEAGUE": "https://www.basketball24.com/europe/champions-league",
+            "FIBA EUROPE CUP": "https://www.basketball24.com/europe/fiba-europe-cup",
+            "ABA LEAGUE": "https://www.basketball24.com/europe/aba-league",
+            "ABA LEAGUE 2": "https://www.basketball24.com/europe/aba-league-2",
+            "ALPE ADRIA CUP": "https://www.basketball24.com/europe/alpe-adria-cup",
+            "BNXT LEAGUE": "https://www.basketball24.com/europe/bnxt-league",
+            "ENBL": "https://www.basketball24.com/europe/enbl",
+            "LATVIA ESTONIAN LEAGUE": "https://www.basketball24.com/europe/latvia-estonian-league"
+        },
+        "Women": {
+            "EUROLEAGUE WOMEN": "https://www.basketball24.com/europe/euroleague-women",
+            "EUROCUP WOMEN": "https://www.basketball24.com/europe/eurocup-women",
+            "WBBL WOMEN": "https://www.basketball24.com/europe/wbbl-women"
+        }
+    },
+    "Asia": {
+        "Men": {
+            "WASL": "https://www.basketball24.com/asia/wasl"
+        },
+        "Women": {}
+    }
+}
