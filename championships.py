@@ -4,12 +4,9 @@ import psycopg2
 from .details.bb_links import links_men, links_women
 
 '''    Class create json and sql table with basketball
- 
     championships(and link for them to flashscore.com 
-    
     choosen by yourself manually before
-
-                                                        '''
+'''
 
 
 class Championships:

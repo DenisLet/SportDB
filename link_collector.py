@@ -3,12 +3,12 @@ import os
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright, TimeoutError
 from details.main_selectors import Selectors
-
+import sys
 class SeasonsCollector:
     def __init__(self, link):
         self.champ = link
         self.all_links = None
-        self.seasons = 2
+        self.seasons = 5
 
     def get_links(self):
         archive_link = f'{self.champ}/archive'
@@ -68,7 +68,6 @@ class SeasonsHandler:
         print('browser has been closed')
 
 
-
 def link_collerctor(url):
     links_champ = SeasonsCollector(url).get_links()
     handler = SeasonsHandler(links_champ)
@@ -77,7 +76,14 @@ def link_collerctor(url):
     matches_links = handler.get_links_to_matches(Selectors.bb_all_matches)
     handler.close_all()
     file_name = '-'.join(url.split('/')[-2:])
-    with open(f"details\\txt_links\\{file_name}.txt", "w") as file: file.write("\n".join(matches_links))
+    with open(f"details\\txt_links\\{file_name}.txt", "w") as file:
+        file.write("\n".join(matches_links))
 
 
-link_collerctor('https://www.basketball24.com/italy/lega-a')
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print('Usage: python link_collector.py [url]')
+        sys.exit(1)
+    arg = sys.argv[1]
+    link_collerctor(arg)
+

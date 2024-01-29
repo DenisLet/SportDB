@@ -100,73 +100,9 @@ class MatchHandler:
             file.write(link + "\n")
             print('Failed link has been saved')
 
+    @abstractmethod
     def create_match_tables(self):
-        conn = psycopg2.connect(
-            host="127.0.0.1",
-            user="postgres",
-            password="123456er",
-            port="5432"
-        )
-        cur = conn.cursor()
-
-        # SQL-запрос для создания таблицы matches
-        create_matches_table_query = """
-        CREATE TABLE IF NOT EXISTS matches (
-            match_id SERIAL PRIMARY KEY,
-            league_id INTEGER,
-            match_date DATE,
-            start_time TIME,
-            team_home VARCHAR(255),
-            team_away VARCHAR(255),
-            league_name VARCHAR(255),
-            stage VARCHAR(255),
-            home_score INTEGER,
-            away_score INTEGER,
-            home_score_ft INTEGER,
-            away_score_ft INTEGER,
-            total_ft INTEGER
-        );
-        """
-
-        cur.execute(create_matches_table_query)
-
-        # SQL-запрос для создания таблицы match_details
-        create_match_details_table_query = """
-        CREATE TABLE IF NOT EXISTS details (
-            match_id INTEGER PRIMARY KEY REFERENCES matches(match_id),
-            home_q1 INTEGER,
-            away_q1 INTEGER,
-            home_q2 INTEGER,
-            away_q2 INTEGER,
-            home_q3 INTEGER,
-            away_q3 INTEGER,
-            home_q4 INTEGER,
-            away_q4 INTEGER,
-            home_ot INTEGER,
-            away_ot INTEGER,
-            home_win REAL,
-            away_win REAL,
-            total REAL,
-            handicap REAL,
-            hc_q1 REAL
-        );
-        """
-
-        cur.execute(create_match_details_table_query)
-
-        try:
-            add_constraint_query = """
-                   ALTER TABLE matches
-                   ADD CONSTRAINT unique_match_constraint UNIQUE (league_id, match_date, team_home, team_away);
-                   """
-
-            cur.execute(add_constraint_query)
-        except psycopg2.errors.DuplicateTable:
-            pass  # Игнорируем ошибку, если ограничение уже существует
-
-        conn.commit()
-        conn.close()
-
+        pass
 
     @abstractmethod
     def process_scoreline(self):
@@ -175,6 +111,11 @@ class MatchHandler:
     @abstractmethod
     def process_coefs(self):
         pass
+
+    @abstractmethod
+    def save_to_database(self, title, scores, coefs):
+        pass
+
 
     def process_title(self):
         team_home_element = self.page.query_selector(Selectors.team_home)
@@ -259,6 +200,84 @@ class MatchHandler:
         self.league_id = data[0][0]
         self.league_name = data[0][1]
 
+
+
+
+
+
+class Basketball(MatchHandler):
+    def __init__(self, links, url):
+        super().__init__(links, url)
+
+
+    def create_match_tables(self):
+        conn = psycopg2.connect(
+            host="127.0.0.1",
+            user="postgres",
+            password="123456er",
+            port="5432"
+        )
+        cur = conn.cursor()
+
+        # SQL-запрос для создания таблицы matches
+        create_matches_table_query = """
+        CREATE TABLE IF NOT EXISTS matches (
+            match_id SERIAL PRIMARY KEY,
+            league_id INTEGER,
+            match_date DATE,
+            start_time TIME,
+            team_home VARCHAR(255),
+            team_away VARCHAR(255),
+            league_name VARCHAR(255),
+            stage VARCHAR(255),
+            home_score INTEGER,
+            away_score INTEGER,
+            home_score_ft INTEGER,
+            away_score_ft INTEGER,
+            total_ft INTEGER
+        );
+        """
+
+        cur.execute(create_matches_table_query)
+
+        # SQL-запрос для создания таблицы match_details
+        create_match_details_table_query = """
+        CREATE TABLE IF NOT EXISTS details (
+            match_id INTEGER PRIMARY KEY REFERENCES matches(match_id),
+            home_q1 INTEGER,
+            away_q1 INTEGER,
+            home_q2 INTEGER,
+            away_q2 INTEGER,
+            home_q3 INTEGER,
+            away_q3 INTEGER,
+            home_q4 INTEGER,
+            away_q4 INTEGER,
+            home_ot INTEGER,
+            away_ot INTEGER,
+            home_win REAL,
+            away_win REAL,
+            total REAL,
+            handicap REAL,
+            hc_q1 REAL
+        );
+        """
+
+        cur.execute(create_match_details_table_query)
+
+        try:
+            add_constraint_query = """
+                   ALTER TABLE matches
+                   ADD CONSTRAINT unique_match_constraint UNIQUE (league_id, match_date, team_home, team_away);
+                   """
+
+            cur.execute(add_constraint_query)
+        except psycopg2.errors.DuplicateTable:
+            pass  # Игнорируем ошибку, если ограничение уже существует
+
+        conn.commit()
+        conn.close()
+
+
     def save_to_database(self, title, scores, coefs):
         if not title or not scores or not coefs:
             return
@@ -298,11 +317,6 @@ class MatchHandler:
 
         conn.close()
 
-
-
-class Basketball(MatchHandler):
-    def __init__(self, links, url):
-        super().__init__(links, url)
 
     def process_scoreline(self):
         home_parts = Selectors.home_part
@@ -418,51 +432,14 @@ class Basketball(MatchHandler):
 
 
 
-
-
-
-# urls = [ 'https://www.basketball24.com/france/lnb',
-#          'https://www.basketball24.com/italy/lega-a',
-#          'https://www.basketball24.com/germany/bbl',
-#          'https://www.basketball24.com/spain/acb',
-#          'https://www.basketball24.com/greece/basket-league',
-#          'https://www.basketball24.com/turkey/super-lig',
-#          'https://www.basketball24.com/russia/vtb-united-league'
-#          ]
-#
-# urls = [
-# "https://www.basketball24.com/austria/superliga",
-# 'https://www.basketball24.com/russia/vtb-united-league',
-# "https://www.basketball24.com/bulgaria/nbl",
-#
-#
-#          ]
-
-
-# urls= ['',
-#        '"https://www.basketball24.com/denmark/basketligaen"',
-#        '"https://www.basketball24.com/czech-republic/nbl"',
-#
-#        "https://www.basketball24.com/finland/korisliiga"
-#
-# ]
-
 urls = [
-"https://www.basketball24.com/israel/super-league",
-"https://www.basketball24.com/japan/b-league",
 "https://www.basketball24.com/south-korea/kbl",
-"https://www.basketball24.com/norway/blno",
-"https://www.basketball24.com/poland/basket-liga",
-"https://www.basketball24.com/portugal/lpb",
-"https://www.basketball24.com/slovakia/extraliga",
-"https://www.basketball24.com/slovenia/liga-nova-kbm",
-"https://www.basketball24.com/hungary/nb-i-a"
-
-
+"https://www.basketball24.com/sweden/basketligan",
+"https://www.basketball24.com/switzerland/sb-league"
 ]
 
 
-for url in urls[:5]:
+for url in urls:
 
     subprocess.run(['python', 'link_collector.py', url], check=True)
     file_name = '-'.join(url.split('/')[-2:])
