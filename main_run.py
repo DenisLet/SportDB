@@ -5,10 +5,7 @@ from sport_handlers.main_handler import MatchHandler
 
 urls = [
 
-"https://www.basketball24.com/brazil/nbb",
-"https://www.basketball24.com/croatia/premijer-liga",
-"https://www.basketball24.com/cyprus/division-a",
-"https://www.basketball24.com/hungary/nb-i-a"
+"https://www.basketball24.com/iceland/premier-league",
 
 ]
 
