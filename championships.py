@@ -54,26 +54,26 @@ class Championships:
         conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT)
         cur = conn.cursor()
 
-        # Проверка наличия базы данных
+        # Проверка - есть база или нет
         cur.execute(f"SELECT 1 FROM pg_catalog.pg_database WHERE datname = '{dbname}'")
         database_exists = cur.fetchone()
 
-        # Если базы данных нет, создаем новую
+        # Если базы данных нет, создаю новую
         if not database_exists:
             cur.execute(f"CREATE DATABASE {dbname}")
             print(f"Database '{dbname}' created successfully")
 
         conn.close()
 
-        # Подключаемся к созданной или существующей базе данных
+        # Подключаюсь к созданной или существующей базе
         conn = self.connect_to_db(dbname)
         cur = conn.cursor()
 
-        # Проверка наличия таблицы в базе данных
+        # Проверка таблицы в базе
         cur.execute("SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = 'championships')")
         table_exists = cur.fetchone()[0]
 
-        # Если таблицы нет, создаем новую таблицу
+        # Если таблицы нет, создаю новую
         if not table_exists:
             create_table_query = '''
                 CREATE TABLE championships (
@@ -89,7 +89,7 @@ class Championships:
             conn.commit()
             print("Table created successfully in PostgreSQL")
 
-        # Добавление данных в таблицу
+
         for country, genders in self.all_leagues.items():
             for gender, leagues in genders.items():
                 for league, link in leagues.items():

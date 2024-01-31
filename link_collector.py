@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright, TimeoutError
 from details.main_selectors import Selectors
 import sys
+
 class SeasonsCollector:
     def __init__(self, link):
         self.champ = link

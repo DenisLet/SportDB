@@ -52,13 +52,13 @@ class MatchHandler:
             self.context = self.browser.new_context()
             self.page_empty = self.context.new_page()
 
-            # Создаем таблицы перед обработкой матчей
+
             self.create_match_tables()
 
             for link in self.links:
                 try:
                     self.page = self.context.new_page()
-                    # Сбрасываем данные перед началом обработки ссылок
+
                     self.reset_data()
 
                     self.page.goto(link)
@@ -72,7 +72,7 @@ class MatchHandler:
 
                     if self.is_match_exists(match_data):
                         print(f"Match already exists: {self.match_title}")
-                        continue  #Продолжаем -> continue, Прекращаем обработку всех оставшихся ссылок -> break
+                        continue  #Продолжаем -> continue, прекращаем обработку всех оставшихся ссылок(когда обновляю уже накачанную базу) -> break
                     else:
                         print('-----')
                         print(self.match_title)

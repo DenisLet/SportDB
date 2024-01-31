@@ -71,7 +71,7 @@ class Basketball(MatchHandler):
 
             cur.execute(add_constraint_query)
         except psycopg2.errors.DuplicateTable:
-            pass  # Игнорируем ошибку, если ограничение уже существует
+            pass
 
         conn.commit()
         conn.close()
@@ -90,7 +90,7 @@ class Basketball(MatchHandler):
         cur = conn.cursor()
 
         try:
-            # SQL-запрос для вставки данных в таблицу matches
+            # SQL запрос для вставки данных в таблицу matches
             insert_match_query = """
             INSERT INTO matches (league_id, match_date, start_time, team_home, team_away, league_name, stage,
                                 home_score, away_score, home_score_ft, away_score_ft, total_ft)
