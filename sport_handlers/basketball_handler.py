@@ -66,7 +66,7 @@ class Basketball(MatchHandler):
         try:
             add_constraint_query = """
                    ALTER TABLE matches
-                   ADD CONSTRAINT unique_match_constraint UNIQUE (league_id, match_date, team_home, team_away);
+                   ADD CONSTRAINT unique_match_constraint UNIQUE (league_id, match_date, start_time, team_home, team_away);
                    """
 
             cur.execute(add_constraint_query)
@@ -132,6 +132,12 @@ class Basketball(MatchHandler):
         print(scores_data)
 
     def process_coefs(self):
+        home_win = None
+        away_win = None
+        average_total = None
+        average_handicap = None
+        average_handicap_q1 = None
+
         def process_coef_button(selector):
             self.page.wait_for_selector(selector, timeout=3000)
             element = self.page.query_selector(selector)
@@ -142,26 +148,13 @@ class Basketball(MatchHandler):
                 all_coefs = [i.inner_text() for i in self.page.query_selector_all(Selectors.coef_box)]
                 return self.find_average_value(all_coefs)
             return None
+
         try:
             self.page.query_selector(Selectors.odds_on_bar).click()
             self.page.wait_for_selector(Selectors.coef_box)
         except:
             print('No odds section')
             pass
-
-        # try:
-        #     check_all_coefs = self.page.query_selector(Selectors.home_away)
-        #     if check_all_coefs:
-        #         coefs_text = self.page.query_selector(Selectors.coef_box).inner_text().split()[:2]
-        #         home_win = float(coefs_text[0])
-        #         away_win = float(coefs_text[1])
-        #     else:
-        #         home_win, away_win = 1.0, 1.0
-        #
-        #
-        # except Exception as e:
-        #     print('Fail with win/win coefs ', e.with_traceback())
-        #     home_win, away_win = 1.0, 1.0
 
         try:
             if self.page.query_selector(Selectors.home_away):
@@ -170,14 +163,12 @@ class Basketball(MatchHandler):
         except:
             home_win = 1.0
 
-
         try:
             if self.page.query_selector(Selectors.home_away):
                 coefs_text = self.page.query_selector(Selectors.coef_box).inner_text().split()[:2]
                 away_win = float(coefs_text[1])
         except:
             away_win = 1.0
-
 
         try:
             average_total = process_coef_button(Selectors.total_button)
@@ -199,7 +190,7 @@ class Basketball(MatchHandler):
 
         coefs = (home_win, away_win, average_total, average_handicap, average_handicap_q1)
         self.coefs = coefs
-        print(self.coefs,'<-')
+        print(self.coefs, '<-')
 
 
     @staticmethod
