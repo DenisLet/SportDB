@@ -72,7 +72,7 @@ class MatchHandler:
 
                     if self.is_match_exists(match_data):
                         print(f"Match already exists: {self.match_title}")
-                        continue  # Прекращаем обработку всех оставшихся ссылок
+                        continue  #Продолжаем -> continue, Прекращаем обработку всех оставшихся ссылок -> break
                     else:
                         print('-----')
                         print(self.match_title)
