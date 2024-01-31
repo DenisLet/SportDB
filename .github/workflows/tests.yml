@@ -3,7 +3,7 @@ name: Run Tests
 on:
   push:
     branches:
-      - master  # или другая ветка, в которой вы работаете
+      - master  
 
 jobs:
   test:
